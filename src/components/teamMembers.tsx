@@ -13,8 +13,7 @@ export function TeamMembersPage({ onNavigate }: TeamMembersPageProps) {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl mb-3">Our People</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Meet the board and team members working behind the
-            scenes to deliver lasting impact.
+            DCL HUB is led by a committed team of organisers, creatives, facilitators, and researchers. We work shoulder-to-shoulder with communities to deliver impact that matters and endures.
           </p>
           <div className="mt-6 flex justify-center">
             <Button
