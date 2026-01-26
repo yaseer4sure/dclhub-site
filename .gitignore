@@ -1,0 +1,10 @@
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor/OS stuff (optional but recommended)
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
