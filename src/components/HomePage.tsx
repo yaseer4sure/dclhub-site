@@ -76,7 +76,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-orange-500 to-orange-600 text-white">
+      <section className="relative bg-gradient-to-br from-primary to-accent text-white">
         {/* Background Image with Dark Overlay */}
         <div className="absolute inset-0">
           <img
@@ -102,7 +102,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 onClick={() => onNavigate("donate")}
                 size="lg"
                 variant="outline"
-                className="bg-orange-600 border-white text-white-600 hover:bg-white/20 hover:text-white"
+                className="bg-primary/90 border-white text-white-600 hover:bg-white/20 hover:text-white"
               >
                 Donate Now
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -111,7 +111,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 onClick={() => onNavigate("campaigns")}
                 size="lg"
                 variant="outline"
-                className="border-white text-orange-600 hover:bg-white/10 hover:text-white"
+                className="border-white text-primary hover:bg-white/10 hover:text-white"
               >
                 View Campaigns
               </Button>
@@ -124,9 +124,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
         <div className="container mx-auto px-4">
           <div className="my-10 mx-20">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="text-center bg-white border-t-10 shadow-lg rounded-xl px-6 py-8 border-amber-800">
+              <div className="text-center bg-white border-t-10 shadow-lg rounded-xl px-6 py-8 border-primary">
                 <div className="flex justify-center mb-2">
-                  <Users className="w-8 h-8 text-orange-500" />
+                  <Users className="w-8 h-8 text-primary" />
                 </div>
                 <div className="text-3xl mb-1">
                 {formatCount(countBeneficiaries)}
@@ -136,9 +136,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 </div>
               </div>
 
-              <div className="text-center bg-white border-t-10 shadow-lg rounded-xl px-6 py-8 border-lime-500">
+              <div className="text-center bg-white border-t-10 shadow-lg rounded-xl px-6 py-8 border-secondary">
                 <div className="flex justify-center mb-2">
-                  <Target className="w-8 h-8 text-orange-500" />
+                  <Target className="w-8 h-8 text-primary" />
                 </div>
                 <div className="text-3xl mb-1">
                 {formatCount(countCampaigns)}
@@ -148,9 +148,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 </div>
               </div>
 
-              <div className="text-center bg-white border-t-10 shadow-lg rounded-xl px-6 py-8 border-amber-400">
+              <div className="text-center bg-white border-t-10 shadow-lg rounded-xl px-6 py-8 border-secondary">
                 <div className="flex justify-center mb-2">
-                  <Award className="w-8 h-8 text-orange-500" />
+                  <Award className="w-8 h-8 text-primary" />
                 </div>
                 <div className="text-3xl mb-1">
                 {formatCount(countVolunteers)}
@@ -160,9 +160,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 </div>
               </div>
 
-              <div className="text-center bg-white border-t-10 shadow-lg rounded-xl px-6 py-8 border-orange-500">
+              <div className="text-center bg-white border-t-10 shadow-lg rounded-xl px-6 py-8 border-primary">
                 <div className="flex justify-center mb-2">
-                  <TrendingUp className="w-8 h-8 text-orange-500" />
+                  <TrendingUp className="w-8 h-8 text-primary" />
                 </div>
                 <div className="text-3xl mb-1">
                 {formatCount(countPartners)}
@@ -181,7 +181,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="py-10 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl mb-3 mx-10 pb-1 border-b-6 border-amber-200">Featured Campaign</h2>
+            <h2 className="text-3xl mb-3 mx-10 pb-1 border-b-6 border-secondary/40">Featured Campaign</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Help us reach our goal and make a real difference
               in the lives of those who need it most.
@@ -196,7 +196,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   alt={featuredCampaign.title}
                   className="w-full h-full object-cover"
                 />
-                <Badge className="absolute top-4 left-4 bg-green-500">
+                <Badge className="absolute top-4 left-4 bg-secondary/100">
                   {featuredCampaign.status === "active"
                     ? "Active"
                     : "Completed"}
@@ -212,16 +212,16 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
                 <div className="mb-6">
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="text-center p-4 bg-orange-50 rounded-lg">
-                      <div className="text-2xl mb-1 text-orange-600">
+                    <div className="text-center p-4 bg-secondary/10 rounded-lg">
+                      <div className="text-2xl mb-1 text-primary">
                         1000+
                       </div>
                       <div className="text-sm text-gray-600">
                         Girls Supported
                       </div>
                     </div>
-                    <div className="text-center p-4 bg-orange-50 rounded-lg">
-                      <div className="text-2xl mb-1 text-orange-600">
+                    <div className="text-center p-4 bg-secondary/10 rounded-lg">
+                      <div className="text-2xl mb-1 text-primary">
                         12
                       </div>
                       <div className="text-sm text-gray-600">
@@ -230,7 +230,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     </div>
                   </div>
                   <div className="mt-3 text-sm text-gray-600 text-center">
-                    <span className="font-medium text-orange-600">
+                    <span className="font-medium text-primary">
                       Ongoing Campaign
                     </span>{" "}
                     • {featuredCampaign.timeline}
@@ -252,7 +252,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   </Button>
                   <Button
                     onClick={() => onNavigate("donate")}
-                    className="flex-1 bg-orange-500 hover:bg-orange-600"
+                    className="flex-1 bg-primary hover:bg-primary/90"
                   >
                     Donate
                   </Button>
@@ -268,7 +268,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
-              <h2 className="text-3xl mb-4 mx-10 text-center border-b-6 border-amber-200">About DCL HUB</h2>
+              <h2 className="text-3xl mb-4 mx-10 text-center border-b-6 border-secondary/40">About DCL HUB</h2>
               <p className="text-gray-600 text-lg mb-4">
                 DCL HUB is a community organization dedicated to
                 empowering youth, women, and girls through
@@ -282,8 +282,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 a future where everyone can thrive.
               </p>
               <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="p-4 bg-orange-50 rounded-lg">
-                  <Target className="w-8 h-8 text-orange-500 mb-2" />
+                <div className="p-4 bg-secondary/10 rounded-lg">
+                  <Target className="w-8 h-8 text-primary mb-2" />
                   <h3 className="font-semibold mb-1">
                     Our Mission
                   </h3>
@@ -295,8 +295,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     real-world challenges with lasting impact.
                   </p>
                 </div>
-                <div className="p-4 bg-orange-50 rounded-lg">
-                  <Eye className="w-8 h-8 text-orange-500 mb-2" />
+                <div className="p-4 bg-secondary/10 rounded-lg">
+                  <Eye className="w-8 h-8 text-primary mb-2" />
                   <h3 className="font-semibold mb-1">
                     Our Vision
                   </h3>
@@ -310,7 +310,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
               </div>
               <Button
                 onClick={() => onNavigate("about")}
-                className="bg-orange-500 hover:bg-orange-600"
+                className="bg-primary hover:bg-primary/90"
               >
                 Learn More About Us
                 <ArrowRight className="ml-2 w-4 h-4" />
@@ -333,7 +333,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl mb-3 mx-10 pb-1 border-b-6 border-amber-200">What We Do</h2>
+            <h2 className="text-3xl mb-3 mx-10 pb-1 border-b-6 border-secondary/40">What We Do</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Our comprehensive programs address the most
               pressing needs in our communities, creating
@@ -353,8 +353,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 />
               </div>
               <CardContent className="p-6">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                  <Briefcase className="w-6 h-6 text-orange-500" />
+                <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                  <Briefcase className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl mb-2">
                   Digital Skills Training
@@ -371,7 +371,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <Button
                   onClick={() => onNavigate("gallery")}
                   variant="link"
-                  className="text-orange-500 p-0 h-auto"
+                  className="text-primary p-0 h-auto"
                 >
                   Learn More{" "}
                   <ArrowRight className="ml-1 w-4 h-4" />
@@ -389,8 +389,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 />
               </div>
               <CardContent className="p-6">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                  <GraduationCap className="w-6 h-6 text-orange-500" />
+                <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                  <GraduationCap className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl mb-2">
                   Entrepreneurship Programs
@@ -405,7 +405,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <Button
                   onClick={() => onNavigate("campaigns")}
                   variant="link"
-                  className="text-orange-500 p-0 h-auto"
+                  className="text-primary p-0 h-auto"
                 >
                   Learn More{" "}
                   <ArrowRight className="ml-1 w-4 h-4" />
@@ -423,8 +423,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 />
               </div>
               <CardContent className="p-6">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                  <Heart className="w-6 h-6 text-orange-500" />
+                <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                  <Heart className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl mb-2">
                   Girls Empowerment
@@ -437,7 +437,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <Button
                   onClick={() => onNavigate("campaigns")}
                   variant="link"
-                  className="text-orange-500 p-0 h-auto"
+                  className="text-primary p-0 h-auto"
                 >
                   Learn More{" "}
                   <ArrowRight className="ml-1 w-4 h-4" />
@@ -455,8 +455,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 />
               </div>
               <CardContent className="p-6">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                  <Briefcase className="w-6 h-6 text-orange-500" />
+                <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                  <Briefcase className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl mb-2">
                   Vocational Training
@@ -471,7 +471,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <Button
                   onClick={() => onNavigate("campaigns")}
                   variant="link"
-                  className="text-orange-500 p-0 h-auto"
+                  className="text-primary p-0 h-auto"
                 >
                   Learn More{" "}
                   <ArrowRight className="ml-1 w-4 h-4" />
@@ -489,8 +489,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 />
               </div>
               <CardContent className="p-6">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                  <Activity className="w-6 h-6 text-orange-500" />
+                <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                  <Activity className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-xl mb-2">
                   Consulting & CSR Programs
@@ -506,7 +506,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <Button
                   onClick={() => onNavigate("campaigns")}
                   variant="link"
-                  className="text-orange-500 p-0 h-auto"
+                  className="text-primary p-0 h-auto"
                 >
                   Learn More{" "}
                   <ArrowRight className="ml-1 w-4 h-4" />
@@ -549,7 +549,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     className="w-full h-full object-cover"
                   />
                   {event.virtual && (
-                    <Badge className="absolute top-3 right-3 bg-blue-500">
+                    <Badge className="absolute top-3 right-3 bg-accent">
                       Virtual
                     </Badge>
                   )}
@@ -575,7 +575,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     onClick={() =>
                       onNavigate("event-details", event.id)
                     }
-                    className="w-full bg-orange-500 hover:bg-orange-600"
+                    className="w-full bg-primary hover:bg-primary/90"
                   >
                     Register Now
                   </Button>
@@ -685,7 +685,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-orange-500/80 text-white">
+      <section className="py-16 bg-primary/80 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl mb-4">
             Ready to Make a Difference?
@@ -699,7 +699,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <Button
               onClick={() => onNavigate("donate")}
               size="lg"
-              className="bg-white text-orange-600 hover:bg-gray-300"
+              className="bg-white text-primary hover:bg-gray-300"
             >
               Donate Now
             </Button>

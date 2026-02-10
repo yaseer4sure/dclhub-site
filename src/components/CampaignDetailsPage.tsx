@@ -60,7 +60,7 @@ export function CampaignDetailsPage({
                 <Badge
                   className={`absolute top-4 right-4 ${
                     campaign.status === 'active'
-                      ? 'bg-green-500'
+                      ? 'bg-secondary/100'
                       : 'bg-gray-500'
                   }`}
                 >
@@ -117,7 +117,7 @@ export function CampaignDetailsPage({
                 <div className="flex gap-4">
                   <Button
                     onClick={() => onNavigate('donate')}
-                    className="flex-1 bg-orange-500 hover:bg-orange-600"
+                    className="flex-1 bg-primary hover:bg-primary/90"
                     size="lg"
                   >
                     <Heart className="w-4 h-4 mr-2" />
@@ -152,7 +152,7 @@ export function CampaignDetailsPage({
                 <div className="space-y-4">
                   <Button
                     onClick={() => onNavigate('donate')}
-                    className="w-full bg-orange-500 hover:bg-orange-600"
+                    className="w-full bg-primary hover:bg-primary/90"
                     size="lg"
                   >
                     Donate Now

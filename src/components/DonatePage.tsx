@@ -7,6 +7,7 @@ import { Label } from './ui/label';
 import { RadioGroup, RadioGroupItem } from './ui/radio-group';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { submitDonation } from '../lib/api';
+import { campaigns } from '../lib/mockData';
 import { toast } from 'sonner';
 
 interface DonatePageProps {
@@ -18,6 +19,7 @@ export function DonatePage({ onNavigate }: DonatePageProps) {
   const [customAmount, setCustomAmount] = useState('');
   const [frequency, setFrequency] = useState<'one-time' | 'monthly'>('one-time');
   const [paymentMethod, setPaymentMethod] = useState('card');
+  const [selectedCampaignId, setSelectedCampaignId] = useState<string>('general');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const predefinedAmounts = ['25', '50', '100', '250', '500'];
@@ -28,11 +30,15 @@ export function DonatePage({ onNavigate }: DonatePageProps) {
 
     const currentAmount = selectedAmount === 'custom' ? customAmount : selectedAmount;
 
+    const campaignId =
+      selectedCampaignId === 'general' ? undefined : selectedCampaignId;
+
     try {
       await submitDonation({
         amount: currentAmount,
         frequency,
         paymentMethod,
+        campaignId,
       });
 
       toast.success('Donation processed successfully!');
@@ -46,6 +52,7 @@ export function DonatePage({ onNavigate }: DonatePageProps) {
   };
 
   const currentAmount = selectedAmount === 'custom' ? customAmount : selectedAmount;
+  const activeCampaigns = campaigns.filter((campaign) => campaign.status === 'active');
 
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -53,7 +60,7 @@ export function DonatePage({ onNavigate }: DonatePageProps) {
         {/* Header */}
         <div className="text-center mb-12 max-w-3xl mx-auto">
           <div className="flex justify-center mb-4">
-            <Heart className="w-16 h-16 text-orange-500 fill-orange-500" />
+            <Heart className="w-16 h-16 text-primary fill-primary" />
           </div>
           <h1 className="text-4xl mb-4">Make a Donation</h1>
           <p className="text-xl text-gray-600">
@@ -67,6 +74,29 @@ export function DonatePage({ onNavigate }: DonatePageProps) {
             <Card>
               <CardContent className="p-8">
                 <form onSubmit={handleSubmit} className="space-y-8">
+                  {/* Campaign Selection */}
+                  <div>
+                    <Label htmlFor="donationCampaign" className="text-lg mb-4 block">
+                      What do you want to donate for
+                    </Label>
+                    <Select
+                      value={selectedCampaignId}
+                      onValueChange={setSelectedCampaignId}
+                    >
+                      <SelectTrigger id="donationCampaign">
+                        <SelectValue placeholder="Select a campaign" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {activeCampaigns.map((campaign) => (
+                          <SelectItem key={campaign.id} value={campaign.id}>
+                            {campaign.title}
+                          </SelectItem>
+                        ))}
+                        <SelectItem value="general">General</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
                   {/* Frequency */}
                   <div>
                     <Label className="text-lg mb-4 block">Donation Frequency</Label>
@@ -79,7 +109,7 @@ export function DonatePage({ onNavigate }: DonatePageProps) {
                         htmlFor="one-time"
                         className={`flex items-center justify-center gap-2 p-4 border-2 rounded-lg cursor-pointer transition-colors ${
                           frequency === 'one-time'
-                            ? 'border-orange-500 bg-orange-50'
+                            ? 'border-primary bg-secondary/10'
                             : 'border-gray-200 hover:border-gray-300'
                         }`}
                       >
@@ -90,7 +120,7 @@ export function DonatePage({ onNavigate }: DonatePageProps) {
                         htmlFor="monthly"
                         className={`flex items-center justify-center gap-2 p-4 border-2 rounded-lg cursor-pointer transition-colors ${
                           frequency === 'monthly'
-                            ? 'border-orange-500 bg-orange-50'
+                            ? 'border-primary bg-secondary/10'
                             : 'border-gray-200 hover:border-gray-300'
                         }`}
                       >
@@ -111,7 +141,7 @@ export function DonatePage({ onNavigate }: DonatePageProps) {
                           onClick={() => setSelectedAmount(amount)}
                           className={`p-4 border-2 rounded-lg transition-colors ${
                             selectedAmount === amount
-                              ? 'border-orange-500 bg-orange-50'
+                              ? 'border-primary bg-secondary/10'
                               : 'border-gray-200 hover:border-gray-300'
                           }`}
                         >
@@ -123,7 +153,7 @@ export function DonatePage({ onNavigate }: DonatePageProps) {
                         onClick={() => setSelectedAmount('custom')}
                         className={`p-4 border-2 rounded-lg transition-colors ${
                           selectedAmount === 'custom'
-                            ? 'border-orange-500 bg-orange-50'
+                            ? 'border-primary bg-secondary/10'
                             : 'border-gray-200 hover:border-gray-300'
                         }`}
                       >
@@ -201,7 +231,7 @@ export function DonatePage({ onNavigate }: DonatePageProps) {
                   {/* Submit Button */}
                   <Button
                     type="submit"
-                    className="w-full bg-orange-500 hover:bg-orange-600"
+                    className="w-full bg-primary hover:bg-primary/90"
                     size="lg"
                     disabled={isSubmitting}
                   >
@@ -258,19 +288,19 @@ export function DonatePage({ onNavigate }: DonatePageProps) {
                   <h4 className="mb-4">Why Donate?</h4>
                   <ul className="space-y-3 text-sm text-gray-600">
                     <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <Check className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
                       <span>100% transparency on fund usage</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <Check className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
                       <span>Regular impact reports</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <Check className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
                       <span>Tax-deductible receipts</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <Check className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
                       <span>Direct community impact</span>
                     </li>
                   </ul>

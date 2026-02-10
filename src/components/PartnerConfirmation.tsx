@@ -13,7 +13,7 @@ export function PartnerConfirmation({ onNavigate }: PartnerConfirmationProps) {
         <Card>
           <CardContent className="p-8 text-center">
             <div className="flex justify-center mb-6">
-              <CheckCircle className="w-20 h-20 text-green-500" />
+              <CheckCircle className="w-20 h-20 text-secondary" />
             </div>
 
             <h1 className="text-3xl mb-4">Thank You for Your Interest!</h1>
@@ -25,15 +25,15 @@ export function PartnerConfirmation({ onNavigate }: PartnerConfirmationProps) {
               <h3 className="text-lg mb-4">What's Next?</h3>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-start gap-2">
-                  <span className="text-red-500">•</span>
+                  <span className="text-primary">•</span>
                   <span>Our partnerships team will review your inquiry within 3 business days</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-500">•</span>
+                  <span className="text-primary">•</span>
                   <span>We'll schedule a call to discuss partnership opportunities</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-500">•</span>
+                  <span className="text-primary">•</span>
                   <span>You'll receive our partnership prospectus and impact reports</span>
                 </li>
               </ul>

@@ -16,23 +16,23 @@ export function Footer({ onNavigate }: FooterProps) {
               <img 
                 src={logo} 
                 alt="DCL HUB Logo" 
-                className="h-10 w-auto brightness-0 invert"
+                className="h-20 w-40 brightness-90 "
               />
             </div>
             <p className="text-sm mb-4">
               Empowering communities through education, health, and sustainable development initiatives.
             </p>
             <div className="flex gap-3">
-              <button className="hover:text-orange-500 transition-colors">
+              <button className="hover:text-primary transition-colors">
                 <Facebook className="w-5 h-5" />
               </button>
-              <button className="hover:text-orange-500 transition-colors">
+              <button className="hover:text-primary transition-colors">
                 <Twitter className="w-5 h-5" />
               </button>
-              <button className="hover:text-orange-500 transition-colors">
+              <button className="hover:text-primary transition-colors">
                 <Instagram className="w-5 h-5" />
               </button>
-              <button className="hover:text-orange-500 transition-colors">
+              <button className="hover:text-primary transition-colors">
                 <Linkedin className="w-5 h-5" />
               </button>
             </div>
@@ -45,7 +45,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate('about')}
-                  className="hover:text-orange-500 transition-colors"
+                  className="hover:text-primary transition-colors"
                 >
                   About Us
                 </button>
@@ -53,7 +53,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate('campaigns')}
-                  className="hover:text-orange-500 transition-colors"
+                  className="hover:text-primary transition-colors"
                 >
                   Campaigns
                 </button>
@@ -61,7 +61,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate('events')}
-                  className="hover:text-orange-500 transition-colors"
+                  className="hover:text-primary transition-colors"
                 >
                   Events
                 </button>
@@ -69,7 +69,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate('gallery')}
-                  className="hover:text-orange-500 transition-colors"
+                  className="hover:text-primary transition-colors"
                 >
                   Gallery
                 </button>
@@ -77,7 +77,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate('blog')}
-                  className="hover:text-orange-500 transition-colors"
+                  className="hover:text-primary transition-colors"
                 >
                   Blog
                 </button>
@@ -92,7 +92,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate('donate')}
-                  className="hover:text-orange-500 transition-colors"
+                  className="hover:text-primary transition-colors"
                 >
                   Donate
                 </button>
@@ -100,7 +100,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate('volunteer')}
-                  className="hover:text-orange-500 transition-colors"
+                  className="hover:text-primary transition-colors"
                 >
                   Volunteer
                 </button>
@@ -108,7 +108,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate('partner')}
-                  className="hover:text-orange-500 transition-colors"
+                  className="hover:text-primary transition-colors"
                 >
                   Partner With Us
                 </button>
@@ -116,7 +116,7 @@ export function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => onNavigate('impact')}
-                  className="hover:text-orange-500 transition-colors"
+                  className="hover:text-primary transition-colors"
                 >
                   Impact Reports
                 </button>

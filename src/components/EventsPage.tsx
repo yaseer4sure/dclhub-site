@@ -22,7 +22,7 @@ export function EventsPage({ onNavigate }: EventsPageProps) {
           className="w-full h-full object-cover"
         />
         {event.virtual && (
-          <Badge className="absolute top-3 right-3 bg-blue-500">
+          <Badge className="absolute top-3 right-3 bg-accent">
             <Video className="w-3 h-3 mr-1" />
             Virtual
           </Badge>
@@ -70,7 +70,7 @@ export function EventsPage({ onNavigate }: EventsPageProps) {
             onClick={() => onNavigate('event-details', event.id)}
             className={
               event.status === 'upcoming'
-                ? 'bg-orange-500 hover:bg-orange-600'
+                ? 'bg-primary hover:bg-primary/90'
                 : ''
             }
             variant={event.status === 'past' ? 'outline' : 'default'}

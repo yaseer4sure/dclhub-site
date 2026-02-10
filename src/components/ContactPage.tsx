@@ -96,7 +96,7 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
 
                   <Button
                     type="submit"
-                    className="w-full bg-red-500 hover:bg-red-600"
+                    className="w-full bg-primary hover:bg-primary/90"
                     size="lg"
                     disabled={isSubmitting}
                   >
@@ -114,12 +114,12 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
                 <h3 className="text-xl mb-6">Get in Touch</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <Mail className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />
+                    <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <div className="mb-1">Email</div>
                       <a
                         href="mailto:info@dclhub.org"
-                        className="text-sm text-gray-600 hover:text-red-500"
+                        className="text-sm text-gray-600 hover:text-primary"
                       >
                         Official.dclhub@gmail.com
                       </a>
@@ -127,12 +127,12 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <Phone className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />
+                    <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <div className="mb-1">Phone</div>
                       <a
                         href="tel:+2349121709466"
-                        className="text-sm text-gray-600 hover:text-red-500"
+                        className="text-sm text-gray-600 hover:text-primary"
                       >
                         +2349121709466
                       </a>
@@ -140,7 +140,7 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />
+                    <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <div className="mb-1">Address</div>
                       <div className="text-sm text-gray-600">

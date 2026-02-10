@@ -54,7 +54,7 @@ export function CampaignsPage({ onNavigate }: CampaignsPageProps) {
                 <Badge
                   className={`absolute top-3 right-3 ${
                     campaign.status === 'active'
-                      ? 'bg-green-500'
+                      ? 'bg-secondary/100'
                       : 'bg-gray-500'
                   }`}
                 >
@@ -106,7 +106,7 @@ export function CampaignsPage({ onNavigate }: CampaignsPageProps) {
                   </Button>
                   <Button
                     onClick={() => onNavigate('donate')}
-                    className="flex-1 bg-orange-500 hover:bg-orange-600"
+                    className="flex-1 bg-primary hover:bg-primary/90"
                   >
                     Donate
                   </Button>

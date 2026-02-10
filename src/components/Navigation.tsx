@@ -51,8 +51,8 @@ export function Navigation({ onNavigate, currentPage }: NavigationProps) {
               <button
                 key={item.page}
                 onClick={() => handleNavClick(item.page)}
-                className={`hover:text-orange-500 transition-colors ${
-                  currentPage === item.page ? 'text-orange-500' : ''
+                className={`hover:text-primary transition-colors ${
+                  currentPage === item.page ? 'text-primary' : ''
                 }`}
               >
                 {item.label}
@@ -61,9 +61,9 @@ export function Navigation({ onNavigate, currentPage }: NavigationProps) {
             <div className="relative group">
               <button
                 onClick={() => handleNavClick('impact')}
-                className={`hover:text-orange-500 transition-colors ${
+                className={`hover:text-primary transition-colors ${
                   currentPage === 'impact' || currentPage === 'gallery'
-                    ? 'text-orange-500'
+                    ? 'text-primary'
                     : ''
                 }`}
               >
@@ -88,14 +88,14 @@ export function Navigation({ onNavigate, currentPage }: NavigationProps) {
               <button
                 key={item.page}
                 onClick={() => handleNavClick(item.page)}
-                className={`hover:text-orange-500 transition-colors ${
-                  currentPage === item.page ? 'text-orange-500' : ''
+                className={`hover:text-primary transition-colors ${
+                  currentPage === item.page ? 'text-primary' : ''
                 }`}
               >
                 {item.label}
               </button>
             ))}
-            <Button onClick={() => handleNavClick('donate')} className="bg-orange-500 hover:bg-orange-600 ml-20">
+            <Button onClick={() => handleNavClick('donate')} className="bg-primary hover:bg-primary/90 ml-20">
               Donate
             </Button>
           </div>
@@ -115,7 +115,7 @@ export function Navigation({ onNavigate, currentPage }: NavigationProps) {
                       key={item.page}
                       onClick={() => handleNavClick(item.page)}
                       className={`text-left p-3 rounded-lg hover:bg-gray-100 transition-colors ${
-                        currentPage === item.page ? 'bg-orange-50 text-orange-500' : ''
+                        currentPage === item.page ? 'bg-secondary/10 text-primary' : ''
                       }`}
                     >
                       {item.label}
@@ -125,7 +125,7 @@ export function Navigation({ onNavigate, currentPage }: NavigationProps) {
                     <button
                       onClick={() => handleNavClick('impact')}
                       className={`w-full text-left p-3 rounded-lg hover:bg-gray-100 transition-colors ${
-                        currentPage === 'impact' ? 'bg-orange-50 text-orange-500' : ''
+                        currentPage === 'impact' ? 'bg-secondary/10 text-primary' : ''
                       }`}
                     >
                       Our Impacts
@@ -150,7 +150,7 @@ export function Navigation({ onNavigate, currentPage }: NavigationProps) {
                       key={item.page}
                       onClick={() => handleNavClick(item.page)}
                       className={`text-left p-3 rounded-lg hover:bg-gray-100 transition-colors ${
-                        currentPage === item.page ? 'bg-orange-50 text-orange-500' : ''
+                        currentPage === item.page ? 'bg-secondary/10 text-primary' : ''
                       }`}
                     >
                       {item.label}
@@ -158,7 +158,7 @@ export function Navigation({ onNavigate, currentPage }: NavigationProps) {
                   ))}
                   <Button
                     onClick={() => handleNavClick('donate')}
-                    className="bg-orange-500 hover:bg-orange-600"
+                    className="bg-primary hover:bg-primary/90"
                   >
                     Donate
                   </Button>

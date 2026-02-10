@@ -26,7 +26,7 @@ export function GalleryPage({ onNavigate }: GalleryPageProps) {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex justify-center mb-4">
-            <Image className="w-12 h-12 text-red-500" />
+            <Image className="w-12 h-12 text-primary" />
           </div>
           <h1 className="text-4xl mb-4">Gallery</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -85,7 +85,7 @@ export function GalleryPage({ onNavigate }: GalleryPageProps) {
           <div className="flex gap-4 justify-center flex-wrap">
             <Button
               onClick={() => onNavigate('events')}
-              className="bg-red-500 hover:bg-red-600"
+              className="bg-primary hover:bg-primary/90"
             >
               View Events
             </Button>

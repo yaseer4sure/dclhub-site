@@ -46,7 +46,7 @@ export function VolunteerPage({ onNavigate }: VolunteerPageProps) {
         {/* Header */}
         <div className="text-center mb-12 max-w-3xl mx-auto">
           <div className="flex justify-center mb-4">
-            <Users className="w-16 h-16 text-red-500" />
+            <Users className="w-16 h-16 text-primary" />
           </div>
           <h1 className="text-4xl mb-4">Become a Volunteer</h1>
           <p className="text-xl text-gray-600">
@@ -137,7 +137,7 @@ export function VolunteerPage({ onNavigate }: VolunteerPageProps) {
 
                   <Button
                     type="submit"
-                    className="w-full bg-red-500 hover:bg-red-600"
+                    className="w-full bg-primary hover:bg-primary/90"
                     size="lg"
                     disabled={isSubmitting}
                   >
@@ -156,19 +156,19 @@ export function VolunteerPage({ onNavigate }: VolunteerPageProps) {
                 <h3 className="text-xl mb-6">Why Volunteer?</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Make a direct impact in your community</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Develop new skills and experiences</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Connect with like-minded people</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Be part of meaningful change</span>
                   </li>
                 </ul>

@@ -44,7 +44,7 @@ export function TeamMembersPage({ onNavigate }: TeamMembersPageProps) {
                     />
                   </div>
                   <h3 className="text-xl mb-1">{member.name}</h3>
-                  <div className="text-sm text-orange-500 mb-3">
+                  <div className="text-sm text-primary mb-3">
                     {member.role}
                   </div>
                   <p className="text-sm text-gray-600">
@@ -74,7 +74,7 @@ export function TeamMembersPage({ onNavigate }: TeamMembersPageProps) {
                     />
                   </div>
                   <h3 className="text-xl mb-1">{member.name}</h3>
-                  <div className="text-sm text-orange-500 mb-3">
+                  <div className="text-sm text-primary mb-3">
                     {member.role}
                   </div>
                   <p className="text-sm text-gray-600">

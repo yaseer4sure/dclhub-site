@@ -102,7 +102,7 @@ export function EventDetailsPage({
                   className="w-full h-full object-cover rounded-t-lg"
                 />
                 {event.virtual && (
-                  <Badge className="absolute top-4 right-4 bg-blue-500">
+                  <Badge className="absolute top-4 right-4 bg-accent">
                     <Video className="w-3 h-3 mr-1" />
                     Virtual Event
                   </Badge>
@@ -122,7 +122,7 @@ export function EventDetailsPage({
                 {/* Event Details */}
                 <div className="grid md:grid-cols-2 gap-4 mb-8 p-6 bg-gray-50 rounded-lg">
                   <div className="flex items-start gap-3">
-                    <Calendar className="w-5 h-5 text-orange-500 mt-1" />
+                    <Calendar className="w-5 h-5 text-primary mt-1" />
                     <div>
                       <div className="text-sm text-gray-600">Date</div>
                       <div>
@@ -137,7 +137,7 @@ export function EventDetailsPage({
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <Clock className="w-5 h-5 text-orange-500 mt-1" />
+                    <Clock className="w-5 h-5 text-primary mt-1" />
                     <div>
                       <div className="text-sm text-gray-600">Time</div>
                       <div>
@@ -156,7 +156,7 @@ export function EventDetailsPage({
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-orange-500 mt-1" />
+                    <MapPin className="w-5 h-5 text-primary mt-1" />
                     <div>
                       <div className="text-sm text-gray-600">Location</div>
                       <div>{event.location}</div>
@@ -164,7 +164,7 @@ export function EventDetailsPage({
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <Users className="w-5 h-5 text-orange-500 mt-1" />
+                    <Users className="w-5 h-5 text-primary mt-1" />
                     <div>
                       <div className="text-sm text-gray-600">Target Audience</div>
                       <div>{event.targetAudience}</div>
@@ -174,7 +174,7 @@ export function EventDetailsPage({
 
                 {/* Countdown */}
                 {timeUntilEvent !== null && timeUntilEvent > 0 && (
-                  <div className="mb-8 p-4 bg-orange-50 border border-orange-200 rounded-lg text-center">
+                  <div className="mb-8 p-4 bg-secondary/10 border border-secondary/30 rounded-lg text-center">
                     <div className="text-2xl mb-1">{timeUntilEvent} days</div>
                     <div className="text-sm text-gray-600">until the event</div>
                   </div>
@@ -208,7 +208,7 @@ export function EventDetailsPage({
                 {event.status === 'upcoming' && !showRegistrationForm && (
                   <Button
                     onClick={() => setShowRegistrationForm(true)}
-                    className="w-full bg-orange-500 hover:bg-orange-600"
+                    className="w-full bg-primary hover:bg-primary/90"
                     size="lg"
                   >
                     Register for This Event
@@ -305,7 +305,7 @@ export function EventDetailsPage({
                         </Button>
                         <Button
                           type="submit"
-                          className="flex-1 bg-orange-500 hover:bg-orange-600"
+                          className="flex-1 bg-primary hover:bg-primary/90"
                           disabled={isSubmitting}
                         >
                           {isSubmitting ? 'Submitting...' : 'Complete Registration'}
@@ -328,7 +328,7 @@ export function EventDetailsPage({
                   {event.status === 'upcoming' && (
                     <Button
                       onClick={() => setShowRegistrationForm(true)}
-                      className="w-full bg-orange-500 hover:bg-orange-600"
+                      className="w-full bg-primary hover:bg-primary/90"
                       size="lg"
                     >
                       Register Now

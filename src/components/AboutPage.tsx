@@ -120,7 +120,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-orange-500 text-white text-sm">
+                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-primary text-white text-sm">
                     ✓
                   </span>
                   <span className="text-gray-800">
@@ -129,7 +129,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-orange-500 text-white text-sm">
+                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-primary text-white text-sm">
                     ✓
                   </span>
                   <span className="text-gray-800">
@@ -154,13 +154,13 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
 
 
       {/* Mission & Vision */}
-      <section className="py-16 bg-green-50">
+      <section className="py-16 bg-secondary/10">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <Card>
               <CardContent className="p-8 b">
                 <div className="flex justify-center mb-4">
-                  <Target className="w-12 h-12 text-orange-500" />
+                  <Target className="w-12 h-12 text-primary" />
                 </div>
                 <h2 className="text-2xl text-center mb-4">
                   Our Mission
@@ -178,7 +178,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
             <Card>
               <CardContent className="p-8">
                 <div className="flex justify-center mb-4">
-                  <Eye className="w-12 h-12 text-orange-500" />
+                  <Eye className="w-12 h-12 text-primary" />
                 </div>
                 <h2 className="text-2xl text-center mb-4">
                   Our Vision
@@ -198,14 +198,14 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
       {/* What We Do */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl text-center mb-12 mx-10 pb-1 border-b-6 border-amber-200">
+          <h2 className="text-3xl text-center mb-12 mx-10 pb-1 border-b-6 border-secondary/40">
             What We Do
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
-                  <Users className="w-8 h-8 text-orange-500" />
+                <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center">
+                  <Users className="w-8 h-8 text-primary" />
                 </div>
               </div>
               <h3 className="text-xl mb-3">
@@ -220,8 +220,8 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
 
             <div className="text-center">
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
-                  <Heart className="w-8 h-8 text-orange-500" />
+                <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center">
+                  <Heart className="w-8 h-8 text-primary" />
                 </div>
               </div>
               <h3 className="text-xl mb-3">
@@ -236,8 +236,8 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
             
             <div className="text-center">
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
-                  <TrendingUp className="w-8 h-8 text-orange-500" />
+                <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center">
+                  <TrendingUp className="w-8 h-8 text-primary" />
                 </div>
               </div>
               <h3 className="text-xl mb-3">
@@ -254,7 +254,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
       </section>
 
       {/* Why We Exist */}
-      <section className="py-16 bg-orange-50">
+      <section className="py-16 bg-secondary/10">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl text-center mb-8">
             Why DCL HUB Exists
@@ -312,7 +312,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
                   <h3 className="text-xl mb-1">
                     {member.name}
                   </h3>
-                  <div className="text-sm text-orange-500 mb-3">
+                  <div className="text-sm text-primary mb-3">
                     {member.role}
                   </div>
                   <p className="text-sm text-gray-600">
@@ -323,7 +323,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
             ))}
             <Button
                 onClick={() => onNavigate("team-members")}
-                className="bg-orange-500 hover:bg-orange-700 text-white rounded-full px-7 h-12"
+                className="bg-primary hover:bg-primary/90 text-white rounded-full px-7 h-12"
               >
                 View more <span className="ml-2">↗</span>
               </Button>
@@ -347,7 +347,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
           </div>
 
           {/* Right Content */}
-          <div className="bg-green-100 text-slate-900 py-16 lg:py-20">
+          <div className="bg-secondary/15 text-slate-900 py-16 lg:py-20">
             <div className="px-6 md:px-10 lg:px-14 max-w-2xl">
               <h2 className="text-3xl md:text-4xl font-semibold mb-10">
                 Our Values
@@ -428,7 +428,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
           <div className="flex gap-4 justify-center flex-wrap">
             <Button
               onClick={() => onNavigate("campaigns")}
-              className="bg-orange-500 hover:bg-orange-600"
+              className="bg-primary hover:bg-primary/90"
               size="lg"
             >
               View Campaigns

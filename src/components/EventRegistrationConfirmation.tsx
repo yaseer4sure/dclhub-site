@@ -26,7 +26,7 @@ export function EventRegistrationConfirmation({
         <Card>
           <CardContent className="p-8 text-center">
             <div className="flex justify-center mb-6">
-              <CheckCircle className="w-20 h-20 text-green-500" />
+              <CheckCircle className="w-20 h-20 text-secondary" />
             </div>
 
             <h1 className="text-3xl mb-4">Registration Confirmed!</h1>
@@ -74,19 +74,19 @@ export function EventRegistrationConfirmation({
               <h3 className="text-lg mb-4">What's Next?</h3>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start gap-2">
-                  <span className="text-orange-500">-</span>
+                  <span className="text-primary">-</span>
                   <span>Check your email for a confirmation and event details</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-orange-500">-</span>
+                  <span className="text-primary">-</span>
                   <span>Add the event to your calendar using the button below</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-orange-500">-</span>
+                  <span className="text-primary">-</span>
                   <span>Join our WhatsApp group to stay updated</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-orange-500">-</span>
+                  <span className="text-primary">-</span>
                   <span>Share the event with friends who might be interested</span>
                 </li>
               </ul>
@@ -94,7 +94,7 @@ export function EventRegistrationConfirmation({
 
             {/* Action Buttons */}
             <div className="space-y-3">
-              <Button className="w-full bg-orange-500 hover:bg-orange-600" size="lg">
+              <Button className="w-full bg-primary hover:bg-primary/90" size="lg">
                 <Calendar className="w-4 h-4 mr-2" />
                 Add to Calendar
               </Button>

@@ -45,7 +45,7 @@ export function PartnerPage({ onNavigate }: PartnerPageProps) {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 max-w-3xl mx-auto">
           <div className="flex justify-center mb-4">
-            <Handshake className="w-16 h-16 text-red-500" />
+            <Handshake className="w-16 h-16 text-primary" />
           </div>
           <h1 className="text-4xl mb-4">Partner With Us</h1>
           <p className="text-xl text-gray-600">
@@ -148,7 +148,7 @@ export function PartnerPage({ onNavigate }: PartnerPageProps) {
 
                   <Button
                     type="submit"
-                    className="w-full bg-red-500 hover:bg-red-600"
+                    className="w-full bg-primary hover:bg-primary/90"
                     size="lg"
                     disabled={isSubmitting}
                   >

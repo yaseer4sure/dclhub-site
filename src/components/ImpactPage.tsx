@@ -14,7 +14,7 @@ export function ImpactPage({ onNavigate }: ImpactPageProps) {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 max-w-3xl mx-auto">
           <div className="flex justify-center mb-4">
-            <TrendingUp className="w-16 h-16 text-red-500" />
+            <TrendingUp className="w-16 h-16 text-primary" />
           </div>
           <h1 className="text-4xl mb-4">Our Impact & Reports</h1>
           <p className="text-xl text-gray-600">
@@ -28,28 +28,28 @@ export function ImpactPage({ onNavigate }: ImpactPageProps) {
           <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             <Card>
               <CardContent className="p-6 text-center">
-                <Users className="w-10 h-10 text-red-500 mx-auto mb-3" />
+                <Users className="w-10 h-10 text-primary mx-auto mb-3" />
                 <div className="text-3xl mb-2">{impactStats.beneficiaries.toLocaleString()}</div>
                 <div className="text-sm text-gray-600">Lives Impacted</div>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6 text-center">
-                <Award className="w-10 h-10 text-red-500 mx-auto mb-3" />
+                <Award className="w-10 h-10 text-primary mx-auto mb-3" />
                 <div className="text-3xl mb-2">{impactStats.campaigns}</div>
                 <div className="text-sm text-gray-600">Active Campaigns</div>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6 text-center">
-                <Heart className="w-10 h-10 text-red-500 mx-auto mb-3" />
+                <Heart className="w-10 h-10 text-primary mx-auto mb-3" />
                 <div className="text-3xl mb-2">{impactStats.volunteers}</div>
                 <div className="text-sm text-gray-600">Volunteers</div>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6 text-center">
-                <TrendingUp className="w-10 h-10 text-red-500 mx-auto mb-3" />
+                <TrendingUp className="w-10 h-10 text-primary mx-auto mb-3" />
                 <div className="text-3xl mb-2">{impactStats.partnersAndSponsors}</div>
                 <div className="text-sm text-gray-600">Partners</div>
               </CardContent>
@@ -81,7 +81,7 @@ export function ImpactPage({ onNavigate }: ImpactPageProps) {
                     <div className="flex justify-between mb-2 text-sm">
                       <span className="text-gray-600">Progress</span>
                       <span>
-                        ${campaign.currentAmount.toLocaleString()} of $
+                      N{campaign.currentAmount.toLocaleString()} of N
                         {campaign.goal.toLocaleString()}
                       </span>
                     </div>
@@ -105,7 +105,7 @@ export function ImpactPage({ onNavigate }: ImpactPageProps) {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <Card className="hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
-                <FileText className="w-10 h-10 text-red-500 mb-3" />
+                <FileText className="w-10 h-10 text-primary mb-3" />
                 <h3 className="text-lg mb-2">Annual Report 2025</h3>
                 <p className="text-sm text-gray-600 mb-4">
                   Comprehensive overview of our activities, impact, and financials for 2025.
@@ -119,7 +119,7 @@ export function ImpactPage({ onNavigate }: ImpactPageProps) {
 
             <Card className="hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
-                <FileText className="w-10 h-10 text-red-500 mb-3" />
+                <FileText className="w-10 h-10 text-primary mb-3" />
                 <h3 className="text-lg mb-2">Financial Statement 2025</h3>
                 <p className="text-sm text-gray-600 mb-4">
                   Detailed breakdown of income, expenses, and fund allocation.
@@ -133,7 +133,7 @@ export function ImpactPage({ onNavigate }: ImpactPageProps) {
 
             <Card className="hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
-                <FileText className="w-10 h-10 text-red-500 mb-3" />
+                <FileText className="w-10 h-10 text-primary mb-3" />
                 <h3 className="text-lg mb-2">Impact Report Q4 2025</h3>
                 <p className="text-sm text-gray-600 mb-4">
                   Latest quarterly impact metrics and success stories.
@@ -191,7 +191,7 @@ export function ImpactPage({ onNavigate }: ImpactPageProps) {
 
         {/* CTA */}
         <section className="text-center">
-          <Card className="max-w-3xl mx-auto bg-red-50 border-red-200">
+          <Card className="max-w-3xl mx-auto bg-secondary/10 border-secondary/30">
             <CardContent className="p-8">
               <h2 className="text-2xl mb-4">Be Part of Our Impact Story</h2>
               <p className="text-gray-600 mb-6">
@@ -200,7 +200,7 @@ export function ImpactPage({ onNavigate }: ImpactPageProps) {
               <div className="flex gap-4 justify-center flex-wrap">
                 <Button
                   onClick={() => onNavigate('donate')}
-                  className="bg-red-500 hover:bg-red-600"
+                  className="bg-primary hover:bg-primary/90"
                 >
                   Donate Now
                 </Button>

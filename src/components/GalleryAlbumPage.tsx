@@ -96,7 +96,7 @@ export function GalleryAlbumPage({
           <div className="flex gap-4 justify-center flex-wrap">
             <Button
               onClick={() => onNavigate('donate')}
-              className="bg-red-500 hover:bg-red-600"
+              className="bg-primary hover:bg-primary/90"
             >
               Donate
             </Button>

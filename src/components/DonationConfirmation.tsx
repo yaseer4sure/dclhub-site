@@ -14,8 +14,8 @@ export function DonationConfirmation({ onNavigate }: DonationConfirmationProps) 
           <CardContent className="p-8 text-center">
             <div className="flex justify-center mb-6">
               <div className="relative">
-                <Heart className="w-20 h-20 text-red-500 fill-red-500" />
-                <CheckCircle className="w-8 h-8 text-green-500 absolute -bottom-1 -right-1 bg-white rounded-full" />
+                <Heart className="w-20 h-20 text-primary fill-primary" />
+                <CheckCircle className="w-8 h-8 text-secondary absolute -bottom-1 -right-1 bg-white rounded-full" />
               </div>
             </div>
 
@@ -48,7 +48,7 @@ export function DonationConfirmation({ onNavigate }: DonationConfirmationProps) 
             </div>
 
             {/* Impact Statement */}
-            <div className="bg-red-50 border border-red-200 rounded-lg p-6 mb-8">
+            <div className="bg-secondary/10 border border-secondary/30 rounded-lg p-6 mb-8">
               <h3 className="text-lg mb-2">Your Impact</h3>
               <p className="text-gray-600">
                 Your $100 donation will sponsor a month of mentorship for 10 girls in our education program.
@@ -60,15 +60,15 @@ export function DonationConfirmation({ onNavigate }: DonationConfirmationProps) 
               <h3 className="text-lg mb-4">What Happens Next?</h3>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start gap-2">
-                  <span className="text-red-500">•</span>
+                  <span className="text-primary">•</span>
                   <span>You'll receive a receipt and tax documentation via email</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-500">•</span>
+                  <span className="text-primary">•</span>
                   <span>We'll send you regular updates on how your donation is making a difference</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-500">•</span>
+                  <span className="text-primary">•</span>
                   <span>You'll be added to our community of supporters</span>
                 </li>
               </ul>
@@ -76,7 +76,7 @@ export function DonationConfirmation({ onNavigate }: DonationConfirmationProps) 
 
             {/* Action Buttons */}
             <div className="space-y-3">
-              <Button className="w-full bg-red-500 hover:bg-red-600" size="lg">
+              <Button className="w-full bg-primary hover:bg-primary/90" size="lg">
                 <Download className="w-4 h-4 mr-2" />
                 Download Receipt
               </Button>

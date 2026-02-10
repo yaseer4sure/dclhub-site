@@ -13,7 +13,7 @@ export function VolunteerConfirmation({ onNavigate }: VolunteerConfirmationProps
         <Card>
           <CardContent className="p-8 text-center">
             <div className="flex justify-center mb-6">
-              <CheckCircle className="w-20 h-20 text-green-500" />
+              <CheckCircle className="w-20 h-20 text-secondary" />
             </div>
 
             <h1 className="text-3xl mb-4">Welcome to the Team!</h1>
@@ -25,26 +25,26 @@ export function VolunteerConfirmation({ onNavigate }: VolunteerConfirmationProps
               <h3 className="text-lg mb-4">What Happens Next?</h3>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-start gap-2">
-                  <span className="text-red-500">•</span>
+                  <span className="text-primary">•</span>
                   <span>We'll review your application within 48 hours</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-500">•</span>
+                  <span className="text-primary">•</span>
                   <span>You'll receive an email with next steps and orientation details</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-500">•</span>
+                  <span className="text-primary">•</span>
                   <span>Join our volunteer WhatsApp group to connect with the community</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-500">•</span>
+                  <span className="text-primary">•</span>
                   <span>We'll match you with opportunities that fit your skills and availability</span>
                 </li>
               </ul>
             </div>
 
             <div className="space-y-3">
-              <Button className="w-full bg-red-500 hover:bg-red-600" size="lg">
+              <Button className="w-full bg-primary hover:bg-primary/90" size="lg">
                 <MessageCircle className="w-4 h-4 mr-2" />
                 Join WhatsApp Group
               </Button>
